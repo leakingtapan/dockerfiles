@@ -49,6 +49,14 @@ git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/pack/plugins/start/ct
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/plugins/start/nerdtree
 vim -u NONE -c "helptags ~/.vim/pack/plugins/start/nerdtree/doc" -c q
 
-## Powerline
+## vim powerline
 git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/plugins/start/vim-airline
 vim -u NONE -c "helptags ~/.vim/pack/plugins/start/vim-airline/doc" -c q
+
+## tmux powerline
+mkdir -p ~/.tmux/
+curl https://raw.githubusercontent.com/powerline/powerline/develop/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf -o ~/.tmux/powerline_tmux_2.1_plus.conf
+
+## tmux tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
