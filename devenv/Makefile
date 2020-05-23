@@ -1,4 +1,4 @@
-IMAGE?=wsx
+IMAGE?=chengpan/wsx
 VERSION?=latest
 
 docker:

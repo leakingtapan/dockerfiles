@@ -1,0 +1,22 @@
+name: Container Images
+
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build container image
+      run: |
+				cd devenv
+				make docker
+    - name: Push to Dockerhub registry
+      run: |
+        BRANCH=$(echo $GITHUB_REF | cut -d'/' -f3)
+        if [ "$BRANCH" = "master" ]; then
+          TAG="latest"
+        else
+          TAG=$BRANCH
+        fi
+        docker login -u ${{ secrets.DOCKERHUB_USER }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+				VERSION=$TAG make docker
