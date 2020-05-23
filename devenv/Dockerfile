@@ -6,7 +6,7 @@ WORKDIR /root
 
 ENV TERM=xterm-256color
 COPY dotfiles .
-ADD build.sh build.sh
-RUN ./build.sh
+ADD build.sh /tmp/build.sh
+RUN /tmp/build.sh && rm /tmp/build.sh
 
 ENTRYPOINT ["/bin/zsh"]
