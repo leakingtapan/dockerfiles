@@ -28,12 +28,12 @@ tar xzf /root/$go_tar_file -C /usr/local
 rm $go_tar_file
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
 
-# install dotfiles
-git clone https://github.com/leakingtapan/dotfiles.git ~/dotfiles
-
 # install VIM plugins
 ## vim-go
 git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
+
+## ultisnips
+git clone https://github.com/SirVer/ultisnips.git ~/.vim/pack/plugins/start/ultisnips
 
 ## solarized
 mkdir -p ~/.vim/colors
