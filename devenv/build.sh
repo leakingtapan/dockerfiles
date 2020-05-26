@@ -24,7 +24,7 @@ git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 # install golang
 go_tar_file=go1.14.3.linux-amd64.tar.gz
 curl -O https://dl.google.com/go/$go_tar_file
-tar xzf /root/$go_tar_file -C /usr/local
+tar xzf ~/$go_tar_file -C /usr/local
 rm $go_tar_file
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
 
