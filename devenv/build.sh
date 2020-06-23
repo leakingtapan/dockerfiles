@@ -53,6 +53,9 @@ vim -u NONE -c "helptags ~/.vim/pack/plugins/start/nerdtree/doc" -c q
 git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/plugins/start/vim-airline
 vim -u NONE -c "helptags ~/.vim/pack/plugins/start/vim-airline/doc" -c q
 
+## vim auto-pairs
+git clone https://github.com/jiangmiao/auto-pairs.git ~/.vim/pack/plugins/start/auto-pairs
+
 ## tmux powerline
 mkdir -p ~/.tmux/
 curl https://raw.githubusercontent.com/powerline/powerline/develop/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf -o ~/.tmux/powerline_tmux_2.1_plus.conf
